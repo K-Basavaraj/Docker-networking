@@ -1,4 +1,4 @@
-#1st best practice using localhost 
+# connected to userdefined bridge network 
 FROM nginx 
 COPY code /usr/share/nginx/html
 RUN rm -rf /etc/nginx/nginx.conf

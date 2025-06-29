@@ -1,0 +1,12 @@
+# connected to userdefined bridge network insted of Defult Docker bridgr network
+FROM node:20
+EXPOSE 8080
+#connection to mysql using userdefined bridge network
+ENV DB_HOST="mysql" 
+RUN mkdir /opt/server
+WORKDIR /opt/server
+COPY package.json .
+COPY *.js .
+RUN npm install 
+CMD ["node", "index.js"]
+
